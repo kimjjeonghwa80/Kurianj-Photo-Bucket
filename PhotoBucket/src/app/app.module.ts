@@ -37,6 +37,8 @@ import {
   MaterialModule
 } from '@angular/material';
 import { environment } from "../environments/environment";
+import { AuthService } from "./services/auth.service";
+import { AuthGuard } from "./services/auth.guard";
 export const MaterialModules = [
   MdAutocompleteModule,
   MdButtonModule,
@@ -78,7 +80,10 @@ export const MaterialModules = [
     BrowserAnimationsModule,
     FlexLayoutModule,
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuard,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

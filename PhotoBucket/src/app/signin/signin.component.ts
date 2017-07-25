@@ -3,6 +3,7 @@ import { AngularFireAuth } from "angularfire2/auth";
 import { Router } from "@angular/router";
 import { environment } from "../../environments/environment";
 import 'rosefire';
+import { AuthService } from "../services/auth.service";
 
 @Component({
   selector: 'app-signin',
@@ -11,7 +12,7 @@ import 'rosefire';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private afAuth: AngularFireAuth, private router: Router) { }
+  constructor(private afAuth: AngularFireAuth, private router: Router, public authService: AuthService) { }
   ngOnInit() {
   }
 

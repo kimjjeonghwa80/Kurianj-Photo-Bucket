@@ -3,31 +3,27 @@ import {AngularFireAuth} from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Router } from "@angular/router";
 import { Observable } from "rxjs/Observable";
-//import { AuthorService } from "./author.service";
+import { AuthorService } from "./author.service";
 
 
 @Injectable()
 export class AuthService {
 
-  public isSignedInStream: Observable<boolean>;
+   public isSignedInStream: Observable<boolean>;
   public displayNameStream: Observable<string>;
-  public photoUrl: string;
   public userID: string;
 
-  //there used to be a private authorService: AuthorService in the parameters
-  constructor(private afAuth: AngularFireAuth, private router: Router) {
+  constructor(private afAuth: AngularFireAuth, private authorService: AuthorService , private router: Router) {
     this.afAuth.authState.subscribe( (user: firebase.User) =>{
       if(user){
           console.log(user, "has signed in");
-          this.photoUrl = user.photoURL;
           this.userID = user.uid;
       } else {
           console.log("Failed to sign in");
-          this.photoUrl = "";
           this.userID = "";
       }
    });
-   this.isSignedInStream = this.afAuth.authState.map<firebase.User, boolean>
+    this.isSignedInStream = this.afAuth.authState.map<firebase.User, boolean>
    ((user: firebase.User) => { 
      return user != null;
     });
@@ -58,7 +54,7 @@ export class AuthService {
       this.router.navigate(['/']);
       const user: firebase.User = result.sser;
       console.log("Push user to the database", user);
-      //this.authorService.updateAuthor(user.uid, user.displayName, user.photoURL);
+      this.authorService.updateAuthor(user.uid, user.displayName);
   });
   }
 

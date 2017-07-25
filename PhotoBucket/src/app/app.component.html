@@ -1,13 +1,15 @@
 <md-toolbar color="primary">
   Photo Bucket
-<span fxFlex></span>
-
-<button *ngIf="showSignOut" md-icon-button [mdMenuTriggerFor]="signOutMenu">
+  <span fxFlex></span>
+<div *ngIf="authService.isSignedInStream | async">
+ {{authService.displayNameStream | async}}
+<button md-icon-button [mdMenuTriggerFor]="signOutMenu">
   <md-icon>more_vert</md-icon>
 </button>
 <md-menu [overlapTrigger]="false" #signOutMenu="mdMenu">
-  <button style="color:#880E4F" md-menu-item (click)="signOut()" [routerLink]="['/signin']" routerLinkActive="active">Sign Out</button>
+  <button md-menu-item (click)="signOut()" [routerLink]="['/signin']" routerLinkActive="active">Sign Out</button>
 </md-menu>
+ </div>
 </md-toolbar>
 <div fxLayoutAlign="center center">
 <div class="container" fxFlex fxFlex.md="960px" fxFlex.gt-md="1000px">

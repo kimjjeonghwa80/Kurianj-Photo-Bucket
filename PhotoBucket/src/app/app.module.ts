@@ -38,7 +38,12 @@ import {
 } from '@angular/material';
 import { environment } from "../environments/environment";
 import { AuthService } from "./services/auth.service";
-import { AuthGuard } from "./services/auth.guard";
+import { PostService } from "./services/post.service";
+import { AuthorService } from "./services/author.service";
+import { ReversePipe } from './pipes/reverse.pipe';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { MypostsComponent } from './myposts/myposts.component';
+import { PostListComponent } from './post-list/post-list.component';
 export const MaterialModules = [
   MdAutocompleteModule,
   MdButtonModule,
@@ -68,7 +73,11 @@ export const MaterialModules = [
   declarations: [
     AppComponent,
     MainComponent,
-    SigninComponent
+    SigninComponent,
+    CreatePostComponent,
+    MypostsComponent,
+    PostListComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
@@ -82,7 +91,8 @@ export const MaterialModules = [
   ],
   providers: [
     AuthService,
-    AuthGuard,
+    PostService,
+    AuthorService
   ],
   bootstrap: [AppComponent]
 })

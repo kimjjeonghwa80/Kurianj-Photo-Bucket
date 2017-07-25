@@ -7,12 +7,9 @@ import { AuthService } from "./services/auth.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-showSignOut = 'false';
-
-constructor(public authService: AuthService){}
-
-  signOut(): void{
-    console.log("signing out the user");
-    
+ 
+ constructor(public authService: AuthService){}
+ signOut(): void{
+    this.authService.signOut();
   };
 }

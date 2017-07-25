@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kurianj-photo-bucket-93522",
+  "private_key_id": "6dda306c26528b480367b669d83c76fd5ab7a461",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDCuwsxo14ZFcAU\nRPMYJqec737rcLvbz6UApQgodmOqwUAD/JQKl+Z3mv0cNj/Ohk+pnRfE0nnjtTrk\nwvPULNCc4GAUVTLKGg1vFjJKYZSNmRTH7+dWjiM+TqoepTkVPhWts/LFolEfZCrx\n87QeB8zNGyBlVDjX/a3GfblL1qUDb4L77eM89aJS13DdzBENE9LEGQ1e66zUCo0F\nM4/1gd5g8dLvIAdjTjjvnJ42qdo9vYxfyZOKCaxuqtAIDJoxkW4ArVDrGuc8YXxt\n60Duzhc/7h+AnP/+JimNGqlX7mcArIctKu3LAVdMvKK0PaN7KNxJM9dYjA0U6N9s\nIlG1qfapAgMBAAECggEAKw/Ku2jZi6mMJs9ShJIzuZgalH0DBepGnjxgb/YyNxXy\nDo+huy/5FpTvCPiUJpr77dGf6nXy32B5zBGycsaQQUi65nQqvZeCRgD+EQXAIIns\nFwSdvz3CXGpv40P9Og3XJGjpNDwfPVZcytFuEL//0ZGAmffEdDsUXRL7UWJ/biEs\n2h+x3swcOb4APt0IgMZH32Q2ky2KM0gYCQQ7fkKOiGwNTziUrkErvJniMKnYG3a/\nvMoNMb9ZBbdLDhpjdGTJEodH5fnAHD325+Zj7FeGtFAWqCmxFxhvMOJK4MIzytI2\nwFpnSmL38Y4Lvg8As4h6k6evp0VEjnygwtl96kincwKBgQD5Hcos2wYN9/pJVPIg\nvPQ0skMOlq33jUO05GDaIX7qHndzeEUewotCujUAGRM8b03lftLmxR19EzQPnQ0J\nrpeh+OmYyOnLR14odx5W0KucuXK2vXpJJU8IgGv+rR5F4Czteskp5gBNtoiajvSG\nv6avebOhyKBJuMa8OriAhKC+ywKBgQDIHImwR5lFc3mgBnURrOi7WqNKWh6lx3lE\nDiEoRDtlMB+QwHAPHNIVIk65Njh6gfYHkE2gswBcmC3quc8BGVSDPS8aFiIg2+tm\nKSN0gTAtLRhyClfVzrfgOYhChH9pVFNOS6cBu29zgqYn2eqfCpsoxZqqN9JUXtv2\nLQl2ZqVd2wKBgQDd/7ki3hB4NEucPBIGML0jlNSDVK41lHMI6hiRaxYxxvLGOSDH\nt7Doxw3iR3ZH/hyZ7ro9ot2Tj6BuZZOv1CIW2r45RJpsZ+41+2lTDmRQp0beKN6n\n/pJ+zgrvixEWTh9bhndsWiZdGtSDf+/TgUkmyTrWavbEm+Cm72FqTkb9nwKBgQCk\nQVh7i6mxqkFxKxu48HbwIkvaYfK6HOvbAsYQqUEfo8qlJHBW109R7aE0wd7GIBr0\nxmwRthxb5MX735ycyE/okbYx8Wz+D8Y/SxFBNjF3Q4bHRNooM9AWiuLfxqZWrNLc\nd5iUAWhQJjOAjozZEvmdE+YKRlusyVg/z2Pu/f5K9QKBgQC33lo4UK4AofEEi4np\noagNMa26Fgzx0AxGHRd61WMuqR6mXmS76xvmnP7isbV2r+A+0yiM/MAKg8AGrFWo\noeO/qAVrqrx1PHtNzGDAzpgGkhIRYOlqWCe2uR2Ka7NbMYBiNxcAnjYYDjFIAzcg\nC/ErYx2DFP3fSXkGsjph0xF0CA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "rosefire@kurianj-photo-bucket-93522.iam.gserviceaccount.com",
+  "client_id": "117527351223568268205",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rosefire%40kurianj-photo-bucket-93522.iam.gserviceaccount.com"
+}

@@ -3,6 +3,7 @@ import { Post } from "../models/post";
 import { MdDialogConfig, MdSnackBar, MdDialog } from "@angular/material";
 import { CreatePostComponent } from "../create-post/create-post.component";
 import * as firebase from 'firebase';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-post',
@@ -14,7 +15,7 @@ export class PostComponent implements OnInit {
   @Input() firebasePath: string;
   isExpanded= false;
 
-  constructor(private snackBar : MdSnackBar, private dialog: MdDialog) { }
+  constructor(private snackBar : MdSnackBar, private dialog: MdDialog,  private router: Router) { }
 
   ngOnInit() {
   }
@@ -38,7 +39,9 @@ export class PostComponent implements OnInit {
   }
 
   open(): void{
-    console.log("Open")
+    console.log("Open");
+    this.router.navigate(["/openPost"]);
+
   }
 
 }

@@ -1,0 +1,40 @@
+.hidden-content{
+    height:250px;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    
+}
+.hidden-content.hidden{
+    height:0;
+    
+}
+
+$horz-padding: 20px;
+
+md-card{
+    margin:10px;
+    md-card-title{
+        padding: 10px $horz-padding;
+        font-size:24px;
+        font-weight: normal;
+        color: #f50057;
+    }
+
+    md-card-content{
+        padding: 10px $horz-padding;
+        margin: 0;
+        font-size: 16px;
+        img{
+            max-width:133px;
+            max-height:133px;
+        }
+    }
+
+    md-card-actions{
+        padding: 10px $horz-padding;
+        button{
+            color: white;
+        }
+        margin: 10px;
+    }
+}

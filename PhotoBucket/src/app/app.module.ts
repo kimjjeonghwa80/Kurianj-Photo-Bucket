@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -38,12 +38,13 @@ import {
 } from '@angular/material';
 import { environment } from "../environments/environment";
 import { AuthService } from "./services/auth.service";
-import { PostService } from "./services/post.service";
 import { AuthorService } from "./services/author.service";
 import { ReversePipe } from './pipes/reverse.pipe';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { MypostsComponent } from './myposts/myposts.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { PostComponent } from './post/post.component';
+import { OpenPostComponent } from './open-post/open-post.component';
 export const MaterialModules = [
   MdAutocompleteModule,
   MdButtonModule,
@@ -77,7 +78,12 @@ export const MaterialModules = [
     CreatePostComponent,
     MypostsComponent,
     PostListComponent,
-    ReversePipe
+    ReversePipe,
+    PostComponent,
+    OpenPostComponent
+  ], 
+  entryComponents: [
+    CreatePostComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,10 +94,10 @@ export const MaterialModules = [
     MaterialModules,
     BrowserAnimationsModule,
     FlexLayoutModule,
+     FormsModule,
   ],
   providers: [
     AuthService,
-    PostService,
     AuthorService
   ],
   bootstrap: [AppComponent]

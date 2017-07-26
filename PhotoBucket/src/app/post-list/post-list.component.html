@@ -1,3 +1,6 @@
-<p>
-  post-list works!
-</p>
+<md-grid-list [cols]="numColumns">
+  <md-grid-tile *ngFor="let post of postStream | async">
+    <app-post fxFlex [post]=post [firebasePath]="firebasePath">
+    </app-post>
+  </md-grid-tile>
+</md-grid-list>

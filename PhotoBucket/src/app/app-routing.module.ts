@@ -8,7 +8,7 @@ import { OpenPostComponent } from "./open-post/open-post.component";
 const routes: Routes = [
     {path: '', pathMatch: 'full', component: MainComponent},
     {path: 'signin', component: SigninComponent},
-    {path: 'openPost', pathMatch: 'full', component: OpenPostComponent},
+    {path: 'openPost/:post',  component: OpenPostComponent},
     {path: 'myposts', pathMatch: 'full', component: MypostsComponent},
     {path: '**', redirectTo: '/'},
 ];

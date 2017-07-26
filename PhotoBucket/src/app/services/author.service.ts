@@ -7,6 +7,8 @@ export class AuthorService {
 
   readonly authorsPath = "authors"; 
   public authorMapStream: FirebaseObjectObservable<Map<string, Author>>;
+  public photoUrl: string;
+  public photoCaption: string;
   constructor(private db: AngularFireDatabase) {
     this.authorMapStream = this.db.object(this.authorsPath);
   }
@@ -16,6 +18,14 @@ export class AuthorService {
       displayName: displayName,
     });
     this.db.object(`/${this.authorsPath}/${authorKey}`).set(author);
+  }
+
+  updatePhotoUrl(myPhoto: string){
+    this.photoUrl = myPhoto;
+  }
+
+  updateCaption(myCaption: string){
+    this.photoCaption = myCaption;
   }
 
 }

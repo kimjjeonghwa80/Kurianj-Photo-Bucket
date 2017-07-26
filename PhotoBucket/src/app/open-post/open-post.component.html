@@ -1,8 +1,9 @@
 <md-card> 
   <md-card-title>
-    <h2>Card Caption</h2>
+    <h2>{{this.photoCaption}}</h2>
   </md-card-title>
   <md-card-content fxLayout="column" fxLayoutAlign="none center">
+     <img [src]="this.photoUrl" alt="Featured Photo"><br>
       <button class="backButton" md-raised-button (click)="back()">BACK</button>
   </md-card-content>
 </md-card>

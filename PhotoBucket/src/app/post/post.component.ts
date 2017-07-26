@@ -4,6 +4,7 @@ import { MdDialogConfig, MdSnackBar, MdDialog } from "@angular/material";
 import { CreatePostComponent } from "../create-post/create-post.component";
 import * as firebase from 'firebase';
 import { Router } from "@angular/router";
+import { AuthorService } from "../services/author.service";
 
 @Component({
   selector: 'app-post',
@@ -15,7 +16,7 @@ export class PostComponent implements OnInit {
   @Input() firebasePath: string;
   isExpanded= false;
 
-  constructor(private snackBar : MdSnackBar, private dialog: MdDialog,  private router: Router) { }
+  constructor(private snackBar : MdSnackBar, private dialog: MdDialog,  private router: Router, private authorService: AuthorService) { }
 
   ngOnInit() {
   }
@@ -40,8 +41,9 @@ export class PostComponent implements OnInit {
 
   open(): void{
     console.log("Open");
-    this.router.navigate(["/openPost"]);
-
+    this.authorService.updatePhotoUrl(this.post.photoUrl);
+    this.authorService.updateCaption(this.post.caption);
+    this.router.navigate([`/openPost/${this.post.$key}`]);
   }
 
 }

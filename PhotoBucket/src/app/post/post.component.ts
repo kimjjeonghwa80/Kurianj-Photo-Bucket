@@ -20,7 +20,7 @@ export class PostComponent implements OnInit {
   }
 
    edit(): void{
-    console.log("edit");
+    console.log("Edit");
     const dialogConfig = new MdDialogConfig();
     dialogConfig.data= {
       firebasePath: this.firebasePath,
@@ -30,11 +30,15 @@ export class PostComponent implements OnInit {
   }
 
   delete(): void{
-    console.log("delete");
+    console.log("Delete");
     firebase.database().ref(this.firebasePath).child(this.post.$key).remove();
     this.snackBar.open("Password Removed!", "Dismiss",{
       duration: 3000,
     });
+  }
+
+  open(): void{
+    console.log("Open")
   }
 
 }

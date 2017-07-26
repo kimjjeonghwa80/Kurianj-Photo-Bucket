@@ -13,7 +13,7 @@
 <div [class.hidden]="!isExpanded" class="hidden-content">
 <md-card-content>
   <div fxLayout fxLayoutAlign="center center">
-     <img *ngIf="post.photoUrl as url" [src]="url" alt="Featured Photo"><br>
+     <img (click)="open()" *ngIf="post.photoUrl as url" [src]="url" alt="Featured Photo"><br>
   </div>
 </md-card-content>
 
